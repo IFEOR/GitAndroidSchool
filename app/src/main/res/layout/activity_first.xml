@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/activity_first_container_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="70dp">
+
+        <TextView
+            android:id="@+id/activity_first_text_fishtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/activity_first_text_fishtext"
+            android:textAlignment="textStart"
+            android:textSize="18sp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/activity_first_button_to_second_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="8dp"
+        android:background="@color/colorLightPink"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/activity_first_button_to_second_screen"
+        android:textSize="18sp" />
+</FrameLayout>
