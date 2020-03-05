@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginFragment">
+
+
+    <EditText
+        android:id="@+id/activity_second_fragment_login_edittext_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:importantForAutofill="no"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-black"
+        android:hint="@string/activity_second_fragment_login_edittext_hint_email"/>
+
+    <EditText
+        android:id="@+id/activity_second_fragment_login_edittext_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:importantForAutofill="no"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-black"
+        android:hint="@string/activity_second_fragment_login_edittext_hint_password"/>
+
+    <Button
+        android:id="@+id/activity_second_fragment_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorLightPink"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/activity_second_fragment_login_button_sign_in" />
+
+    <ProgressBar
+        android:id="@+id/activity_second_fragment_login_progressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+</LinearLayout>
