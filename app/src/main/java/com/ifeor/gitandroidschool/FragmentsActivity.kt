@@ -2,11 +2,10 @@ package com.ifeor.gitandroidschool
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_second.*
 
 class FragmentsActivity : AppCompatActivity() {
 
-    val manager = supportFragmentManager
+    private val manager = supportFragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
