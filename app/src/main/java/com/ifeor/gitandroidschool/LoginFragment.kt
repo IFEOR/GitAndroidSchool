@@ -28,19 +28,32 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         activity_second_fragment_login_button.setOnClickListener {
-            activity_second_fragment_login_edittext_login.visibility = View.INVISIBLE
-            activity_second_fragment_login_edittext_password.visibility = View.INVISIBLE
-            activity_second_fragment_login_button.visibility = View.INVISIBLE
-            activity_second_fragment_login_progressBar.visibility = View.VISIBLE
+            var isNotError: Boolean = true
+            if (activity_second_fragment_login_edittext_login.text.length < 1) {
+                activity_second_fragment_login_edittext_login.isFocusable = true
+                activity_second_fragment_login_edittext_login.setError("Сan not be empty")
+                isNotError = false
+            }
+            if (activity_second_fragment_login_edittext_password.text.length < 8) {
+                activity_second_fragment_login_edittext_password.isFocusable = true
+                activity_second_fragment_login_edittext_password.setError("Minimum 8 characters")
+                isNotError = false
+            }
+            if (isNotError) {
+                activity_second_fragment_login_edittext_login.visibility = View.INVISIBLE
+                activity_second_fragment_login_edittext_password.visibility = View.INVISIBLE
+                activity_second_fragment_login_button.visibility = View.INVISIBLE
+                activity_second_fragment_login_progressBar.visibility = View.VISIBLE
 
-            CoroutineScope(Dispatchers.Main).launch {
-                withContext(Dispatchers.IO) {
-                    delay(TimeUnit.SECONDS.toMillis(3))
+                CoroutineScope(Dispatchers.Main).launch {
+                    withContext(Dispatchers.IO) {
+                        delay(TimeUnit.SECONDS.toMillis(3))
+                    }
+                    activity_second_fragment_login_edittext_login.visibility = View.VISIBLE
+                    activity_second_fragment_login_edittext_password.visibility = View.VISIBLE
+                    activity_second_fragment_login_button.visibility = View.VISIBLE
+                    activity_second_fragment_login_progressBar.visibility = View.INVISIBLE
                 }
-                activity_second_fragment_login_edittext_login.visibility = View.VISIBLE
-                activity_second_fragment_login_edittext_password.visibility = View.VISIBLE
-                activity_second_fragment_login_button.visibility = View.VISIBLE
-                activity_second_fragment_login_progressBar.visibility = View.INVISIBLE
             }
         }
     }
