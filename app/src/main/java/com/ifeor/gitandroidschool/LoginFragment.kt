@@ -19,10 +19,7 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        activity_second_fragment_login_button.setOnClickListener {
-            onLoginClick()
-        }
+        activity_second_fragment_login_button.setOnClickListener { onLoginClick() }
     }
 
     private fun onLoginClick() {
@@ -47,13 +44,12 @@ class LoginFragment : Fragment() {
         }
     }
 
-    fun changeVisibility(state: ScreenState) {
-        if (state == ScreenState.LOADING) {
-            activity_second_fragment_login_container_content.setVisible(false)
-            activity_second_fragment_login_container_loading.setVisible(true)
-        } else if (state == ScreenState.CONTENT) {
-            activity_second_fragment_login_container_content.setVisible(true)
-            activity_second_fragment_login_container_loading.setVisible(false)
-        }
+    private fun changeVisibility(state: ScreenState) {
+        activity_second_fragment_login_container_content.setVisible(state == ScreenState.CONTENT)
+        activity_second_fragment_login_container_loading.setVisible(state == ScreenState.LOADING)
     }
+}
+
+enum class ScreenState {
+    LOADING, CONTENT
 }
