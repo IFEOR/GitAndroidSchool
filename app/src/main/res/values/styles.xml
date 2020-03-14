@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Theme for all editText's in project. -->
+    <style name="editTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>
