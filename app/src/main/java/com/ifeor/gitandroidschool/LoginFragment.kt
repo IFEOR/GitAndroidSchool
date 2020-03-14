@@ -15,41 +15,45 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_login, container, false)
-    }
+    ): View? = inflater.inflate(R.layout.fragment_login, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         activity_second_fragment_login_button.setOnClickListener {
-            var isNotError = true
-            if (activity_second_fragment_login_edittext_login.text.isEmpty()) {
-                activity_second_fragment_login_edittext_login.isFocusable = true
-                activity_second_fragment_login_edittext_login.error = "Сan not be empty"
-                isNotError = false
-            }
-            if (activity_second_fragment_login_edittext_password.text.length < 8) {
-                activity_second_fragment_login_edittext_password.isFocusable = true
-                activity_second_fragment_login_edittext_password.error = "Minimum 8 characters"
-                isNotError = false
-            }
-            if (isNotError) {
-                activity_second_fragment_login_edittext_login.visibility = View.INVISIBLE
-                activity_second_fragment_login_edittext_password.visibility = View.INVISIBLE
-                activity_second_fragment_login_button.visibility = View.INVISIBLE
-                activity_second_fragment_login_progressBar.visibility = View.VISIBLE
+            onLoginClick()
+        }
+    }
 
-                CoroutineScope(Dispatchers.Main).launch {
-                    withContext(Dispatchers.IO) {
-                        delay(TimeUnit.SECONDS.toMillis(3))
-                    }
-                    activity_second_fragment_login_edittext_login.visibility = View.VISIBLE
-                    activity_second_fragment_login_edittext_password.visibility = View.VISIBLE
-                    activity_second_fragment_login_button.visibility = View.VISIBLE
-                    activity_second_fragment_login_progressBar.visibility = View.INVISIBLE
+    private fun onLoginClick() {
+        var isNotError = true
+        if (activity_second_fragment_login_edittext_login.text.isEmpty()) {
+            activity_second_fragment_login_edittext_login.error = "Сan not be empty"
+            isNotError = false
+        }
+        if (activity_second_fragment_login_edittext_password.text.length < 8) {
+            activity_second_fragment_login_edittext_password.error = "Minimum 8 characters"
+            isNotError = false
+        }
+        if (isNotError) {
+            changeVisibility(ScreenState.LOADING)
+            // Sleep IO coroutine
+            CoroutineScope(Dispatchers.Main).launch {
+                withContext(Dispatchers.IO) {
+                    delay(TimeUnit.SECONDS.toMillis(3))
                 }
+                changeVisibility(ScreenState.CONTENT)
             }
+        }
+    }
+
+    fun changeVisibility(state: ScreenState) {
+        if (state == ScreenState.LOADING) {
+            activity_second_fragment_login_container_content.setVisible(false)
+            activity_second_fragment_login_container_loading.setVisible(true)
+        } else if (state == ScreenState.CONTENT) {
+            activity_second_fragment_login_container_content.setVisible(true)
+            activity_second_fragment_login_container_loading.setVisible(false)
         }
     }
 }
