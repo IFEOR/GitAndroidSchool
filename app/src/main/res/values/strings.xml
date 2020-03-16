@@ -7,4 +7,6 @@
     <string name="activity_second_fragment_login_button_sign_in">Sign in or register</string>
     <string name="activity_second_fragment_login_edittext_hint_email">E-mail</string>
     <string name="activity_second_fragment_login_edittext_hint_password">Password</string>
+    <string name="activity_second_fragment_posts_text_logo_omstu">OmSTU logo</string>
+    <string name="activity_second_fragment_posts_text_topic">ОмГТУ</string>
 </resources>
