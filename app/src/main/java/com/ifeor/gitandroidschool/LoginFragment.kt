@@ -39,7 +39,12 @@ class LoginFragment : Fragment() {
                 withContext(Dispatchers.IO) {
                     delay(TimeUnit.SECONDS.toMillis(3))
                 }
-                changeVisibility(ScreenState.CONTENT)
+                try {
+                    (activity as FragmentsActivity).createFragment(PostsFragment())
+                }
+                catch (e: Exception) {
+                    changeVisibility(ScreenState.CONTENT)
+                }
             }
         }
     }
