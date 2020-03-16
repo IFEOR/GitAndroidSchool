@@ -10,12 +10,8 @@
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/post_first"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@color/colorWhite"
-            android:padding="8dp"
+            android:id="@+id/activity_second_fragment_posts_post_first"
+            style="@style/postStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -52,14 +48,11 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@color/colorWhite"
-            android:padding="8dp"
+            android:id="@+id/activity_second_fragment_posts_post_second"
+            style="@style/postStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/post_first">
+            app:layout_constraintTop_toBottomOf="@id/activity_second_fragment_posts_post_first">
 
             <ImageView
                 android:id="@+id/activity_second_fragment_posts_image_second"
