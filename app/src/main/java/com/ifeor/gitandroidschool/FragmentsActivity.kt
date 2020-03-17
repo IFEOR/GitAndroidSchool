@@ -12,10 +12,19 @@ class FragmentsActivity : AppCompatActivity() {
         createFragment(LoginFragment())
     }
 
-    fun createFragment(fragment : Fragment) {
+    fun createFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.activity_second_fragment_container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+
+    companion object {
+        const val FIRST_ACTIVITY_TEXT = "Text from first activity"
+    }
+
+    @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+    fun getFishtext(): String {
+        return intent.getStringExtra(FIRST_ACTIVITY_TEXT)
     }
 }

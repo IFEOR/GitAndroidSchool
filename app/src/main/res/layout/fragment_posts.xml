@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
-                android:text="@string/activity_first_text_fishtext"
+                android:text="@string/activity_second_fragment_posts_text_not_found"
                 android:textSize="18sp"
                 app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_topic_first"
                 tools:layout_editor_absoluteX="4dp" />
@@ -80,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
-                android:text="@string/activity_first_text_fishtext"
+                android:text="@string/activity_second_fragment_posts_text_not_found"
                 android:textSize="18sp"
                 app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_topic_second"
                 tools:layout_editor_absoluteX="4dp" />
