@@ -24,7 +24,5 @@ class FragmentsActivity : AppCompatActivity() {
     }
 
     @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
-    fun getFishtext(): String {
-        return intent.getStringExtra(FIRST_ACTIVITY_TEXT)
-    }
+    fun getFishtext(): String = intent.getStringExtra(FIRST_ACTIVITY_TEXT)
 }

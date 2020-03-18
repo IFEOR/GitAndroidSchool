@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/activity_second_fragment_posts_post_first"
             style="@style/postStyle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_width="wrap_content"
+            android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/activity_second_fragment_posts_image_first"
@@ -72,9 +72,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/activity_second_fragment_posts_post_second"
             style="@style/postStyle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/activity_second_fragment_posts_post_first">
+            android:layout_width="wrap_content"
+            android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/activity_second_fragment_posts_image_second"
@@ -129,5 +128,5 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_note_second" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>
