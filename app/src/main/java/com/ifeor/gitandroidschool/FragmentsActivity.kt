@@ -6,6 +6,10 @@ import androidx.fragment.app.Fragment
 
 class FragmentsActivity : AppCompatActivity() {
 
+    companion object {
+        const val FIRST_ACTIVITY_TEXT = "Text from first activity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
@@ -17,10 +21,6 @@ class FragmentsActivity : AppCompatActivity() {
         transaction.replace(R.id.activity_second_fragment_container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
-    }
-
-    companion object {
-        const val FIRST_ACTIVITY_TEXT = "Text from first activity"
     }
 
     @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")

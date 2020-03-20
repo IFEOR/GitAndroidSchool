@@ -23,6 +23,23 @@ class LoginFragment : Fragment() {
     }
 
     private fun onLoginClick() {
+        if (loginValidation()) {
+            changeVisibility(ScreenState.LOADING)
+            // Sleep IO coroutine
+            CoroutineScope(Dispatchers.Main).launch {
+                withContext(Dispatchers.IO) {
+                    delay(TimeUnit.SECONDS.toMillis(3))
+                }
+                try {
+                    (activity as FragmentsActivity).createFragment(PostsFragment())
+                } catch (e: Exception) {
+                    changeVisibility(ScreenState.CONTENT)
+                }
+            }
+        }
+    }
+
+    private fun loginValidation(): Boolean {
         var isNotError = true
         if (activity_second_fragment_login_edittext_login.text.isEmpty()) {
             activity_second_fragment_login_edittext_login.error = "Сan not be empty"
@@ -32,29 +49,17 @@ class LoginFragment : Fragment() {
             activity_second_fragment_login_edittext_password.error = "Minimum 8 characters"
             isNotError = false
         }
-        if (isNotError) {
-            changeVisibility(ScreenState.LOADING)
-            // Sleep IO coroutine
-            CoroutineScope(Dispatchers.Main).launch {
-                withContext(Dispatchers.IO) {
-                    delay(TimeUnit.SECONDS.toMillis(3))
-                }
-                try {
-                    (activity as FragmentsActivity).createFragment(PostsFragment())
-                }
-                catch (e: Exception) {
-                    changeVisibility(ScreenState.CONTENT)
-                }
-            }
-        }
+        if (isNotError)
+            return true
+        return false
     }
 
     private fun changeVisibility(state: ScreenState) {
         activity_second_fragment_login_container_content.setVisible(state == ScreenState.CONTENT)
         activity_second_fragment_login_container_loading.setVisible(state == ScreenState.LOADING)
     }
-}
 
-enum class ScreenState {
-    LOADING, CONTENT
+    enum class ScreenState {
+        LOADING, CONTENT
+    }
 }

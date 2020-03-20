@@ -9,7 +9,7 @@
     <string name="activity_second_fragment_login_edittext_hint_password">Password</string>
     <string name="activity_second_fragment_posts_text_logo_omstu">OmSTU logo</string>
     <string name="activity_second_fragment_posts_text_topic">ОмГТУ</string>
-    <string name="activity_second_fragment_posts_text_not_found">К сожалению, текст был утерян где-то в пути :(</string>
+    <string name="activity_second_fragment_posts_text_tools">Этот текст просто будет здесь для наглядности…</string>
     <string name="activity_second_fragment_posts_text_show_all">Показать полностью…</string>
     <string name="activity_second_fragment_posts_text_hide_part">Скрыть</string>
 </resources>

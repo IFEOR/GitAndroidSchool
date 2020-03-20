@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:clipToPadding="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,14 +39,11 @@
 
             <TextView
                 android:id="@+id/activity_second_fragment_posts_note_first"
+                style="@style/textShowAndHideStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:ellipsize="end"
-                android:text="@string/activity_second_fragment_posts_text_not_found"
-                android:textSize="18sp"
                 app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_topic_first"
-                tools:layout_editor_absoluteX="4dp" />
+                tools:text="@string/activity_second_fragment_posts_text_tools" />
 
             <TextView
                 android:id="@+id/activity_second_fragment_posts_show_all_post_first"
@@ -98,14 +96,11 @@
 
             <TextView
                 android:id="@+id/activity_second_fragment_posts_note_second"
+                style="@style/textShowAndHideStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:ellipsize="end"
-                android:text="@string/activity_second_fragment_posts_text_not_found"
-                android:textSize="18sp"
                 app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_topic_second"
-                tools:layout_editor_absoluteX="4dp" />
+                tools:text="@string/activity_second_fragment_posts_text_tools" />
 
             <TextView
                 android:id="@+id/activity_second_fragment_posts_show_all_post_second"

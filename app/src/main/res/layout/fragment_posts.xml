@@ -38,14 +38,11 @@
 
             <TextView
                 android:id="@+id/activity_second_fragment_posts_note_first"
+                style="@style/textShowAndHideStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:ellipsize="end"
-                android:text="@string/activity_second_fragment_posts_text_not_found"
-                android:textSize="18sp"
                 app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_topic_first"
-                tools:layout_editor_absoluteX="4dp" />
+                tools:text="@string/activity_second_fragment_posts_text_tools" />
 
             <TextView
                 android:id="@+id/activity_second_fragment_posts_show_all_post_first"
@@ -99,14 +96,12 @@
 
             <TextView
                 android:id="@+id/activity_second_fragment_posts_note_second"
+                style="@style/textShowAndHideStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:ellipsize="end"
-                android:text="@string/activity_second_fragment_posts_text_not_found"
-                android:textSize="18sp"
                 app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_topic_second"
-                tools:layout_editor_absoluteX="4dp" />
+                tools:layout_editor_absoluteX="8dp"
+                tools:text="@string/activity_second_fragment_posts_text_tools" />
 
             <TextView
                 android:id="@+id/activity_second_fragment_posts_show_all_post_second"
@@ -129,5 +124,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_note_second" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_post_second" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
