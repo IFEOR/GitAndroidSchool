@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 class FragmentsActivity : AppCompatActivity() {
 
     companion object {
-        const val FIRST_ACTIVITY_TEXT = "Text from first activity"
+        const val FIRST_ACTIVITY_TEXT = "Fishtext"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

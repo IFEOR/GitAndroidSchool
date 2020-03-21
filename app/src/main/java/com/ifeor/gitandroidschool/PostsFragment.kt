@@ -18,16 +18,16 @@ class PostsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getFirstActivityText()
-        onClickListeners()
+        setOnClickListeners()
     }
 
     private fun getFirstActivityText() {
-        val firstActiviteText = (activity as FragmentsActivity).getFishtext()
-        activity_second_fragment_posts_note_first.text = firstActiviteText
-        activity_second_fragment_posts_note_second.text = firstActiviteText
+        val firstActivityText = (activity as FragmentsActivity).getFishtext()
+        activity_second_fragment_posts_note_first.text = firstActivityText
+        activity_second_fragment_posts_note_second.text = firstActivityText
     }
 
-    private fun onClickListeners() {
+    private fun setOnClickListeners() {
         // Show and Hide for first post
         activity_second_fragment_posts_show_all_post_first.setOnClickListener { onShowAllFirstPost() }
         activity_second_fragment_posts_hide_part_post_first.setOnClickListener { onHidePartFirstPost() }

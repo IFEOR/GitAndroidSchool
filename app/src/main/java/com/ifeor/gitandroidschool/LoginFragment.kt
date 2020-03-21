@@ -23,7 +23,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun onLoginClick() {
-        if (loginValidation()) {
+        if (isValidLogin()) {
             changeVisibility(ScreenState.LOADING)
             // Sleep IO coroutine
             CoroutineScope(Dispatchers.Main).launch {
@@ -39,19 +39,17 @@ class LoginFragment : Fragment() {
         }
     }
 
-    private fun loginValidation(): Boolean {
+    private fun isValidLogin(): Boolean {
         var isNotError = true
         if (activity_second_fragment_login_edittext_login.text.isEmpty()) {
-            activity_second_fragment_login_edittext_login.error = "Сan not be empty"
+            activity_second_fragment_login_edittext_login.error = R.string.activity_second_fragment_login_error_empty.toString()
             isNotError = false
         }
         if (activity_second_fragment_login_edittext_password.text.length < 8) {
-            activity_second_fragment_login_edittext_password.error = "Minimum 8 characters"
+            activity_second_fragment_login_edittext_password.error = R.string.activity_second_fragment_login_error_min_char.toString()
             isNotError = false
         }
-        if (isNotError)
-            return true
-        return false
+        return isNotError
     }
 
     private fun changeVisibility(state: ScreenState) {

@@ -12,4 +12,6 @@
     <string name="activity_second_fragment_posts_text_tools">Этот текст просто будет здесь для наглядности…</string>
     <string name="activity_second_fragment_posts_text_show_all">Показать полностью…</string>
     <string name="activity_second_fragment_posts_text_hide_part">Скрыть</string>
+    <string name="activity_second_fragment_login_error_empty">Can not be empty</string>
+    <string name="activity_second_fragment_login_error_min_char">Minimum 8 characters</string>
 </resources>
