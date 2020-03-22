@@ -69,6 +69,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/activity_second_fragment_posts_post_second"
+            android:layout_marginBottom="8dp"
             style="@style/postStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
