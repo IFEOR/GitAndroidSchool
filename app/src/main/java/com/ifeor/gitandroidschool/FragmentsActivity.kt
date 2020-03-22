@@ -6,10 +6,11 @@ import androidx.fragment.app.Fragment
 
 class FragmentsActivity : AppCompatActivity() {
 
-    var actualFragment: Fragment = LoginFragment()
     companion object {
         const val FIRST_ACTIVITY_TEXT = "Fishtext"
     }
+
+    var actualFragment: Fragment = LoginFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
