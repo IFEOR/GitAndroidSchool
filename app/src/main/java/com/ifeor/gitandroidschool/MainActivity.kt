@@ -15,6 +15,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun onSecondScreenClick() {
         val intent = Intent(this, FragmentsActivity::class.java)
+        // Data transferring
+        val sendingText = activity_first_text_fishtext.text
+        intent.putExtra(FragmentsActivity.FIRST_ACTIVITY_TEXT, sendingText)
         startActivity(intent)
     }
 }

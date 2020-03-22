@@ -7,4 +7,11 @@
     <string name="activity_second_fragment_login_button_sign_in">Sign in or register</string>
     <string name="activity_second_fragment_login_edittext_hint_email">E-mail</string>
     <string name="activity_second_fragment_login_edittext_hint_password">Password</string>
+    <string name="activity_second_fragment_posts_text_logo_omstu">OmSTU logo</string>
+    <string name="activity_second_fragment_posts_text_topic">ОмГТУ</string>
+    <string name="activity_second_fragment_posts_text_tools">Этот текст просто будет здесь для наглядности…</string>
+    <string name="activity_second_fragment_posts_text_show_all">Показать полностью…</string>
+    <string name="activity_second_fragment_posts_text_hide_part">Скрыть</string>
+    <string name="activity_second_fragment_login_error_empty">Can not be empty</string>
+    <string name="activity_second_fragment_login_error_min_char">Minimum 8 characters</string>
 </resources>

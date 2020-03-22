@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activity_second_fragment_posts_post_first"
+            style="@style/postStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/activity_second_fragment_posts_image_first"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:contentDescription="@string/activity_second_fragment_posts_text_logo_omstu"
+                android:src="@drawable/omstu_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/activity_second_fragment_posts_topic_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/activity_second_fragment_posts_text_topic"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/activity_second_fragment_posts_image_first"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/activity_second_fragment_posts_note_first"
+                style="@style/textShowAndHideStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_topic_first"
+                tools:text="@string/activity_second_fragment_posts_text_tools" />
+
+            <TextView
+                android:id="@+id/activity_second_fragment_posts_show_all_post_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_second_fragment_posts_text_show_all"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_note_first" />
+
+            <TextView
+                android:id="@+id/activity_second_fragment_posts_hide_part_post_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_second_fragment_posts_text_hide_part"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_note_first" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activity_second_fragment_posts_post_second"
+            android:layout_marginBottom="8dp"
+            style="@style/postStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_second_fragment_posts_post_first">
+
+            <ImageView
+                android:id="@+id/activity_second_fragment_posts_image_second"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:contentDescription="@string/activity_second_fragment_posts_text_logo_omstu"
+                android:src="@drawable/omstu_logo"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/activity_second_fragment_posts_topic_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/activity_second_fragment_posts_text_topic"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/activity_second_fragment_posts_image_second"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/activity_second_fragment_posts_note_second"
+                style="@style/textShowAndHideStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_topic_second"
+                tools:layout_editor_absoluteX="8dp"
+                tools:text="@string/activity_second_fragment_posts_text_tools" />
+
+            <TextView
+                android:id="@+id/activity_second_fragment_posts_show_all_post_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_second_fragment_posts_text_show_all"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_note_second" />
+
+            <TextView
+                android:id="@+id/activity_second_fragment_posts_hide_part_post_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_second_fragment_posts_text_hide_part"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_second_fragment_posts_note_second" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
