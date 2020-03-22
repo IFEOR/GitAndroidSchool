@@ -19,6 +19,7 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as FragmentsActivity).actualFragment = LoginFragment()
         activity_second_fragment_login_button.setOnClickListener { onLoginClick() }
     }
 
@@ -28,7 +29,7 @@ class LoginFragment : Fragment() {
             // Sleep IO coroutine
             CoroutineScope(Dispatchers.Main).launch {
                 withContext(Dispatchers.IO) {
-                    delay(TimeUnit.SECONDS.toMillis(3))
+                    delay(TimeUnit.SECONDS.toMillis(1))
                 }
                 try {
                     (activity as FragmentsActivity).createFragment(PostsFragment())

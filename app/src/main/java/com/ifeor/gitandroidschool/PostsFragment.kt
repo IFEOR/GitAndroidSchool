@@ -17,6 +17,7 @@ class PostsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as FragmentsActivity).actualFragment = PostsFragment()
         getFirstActivityText()
         setOnClickListeners()
     }

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 
 class FragmentsActivity : AppCompatActivity() {
 
+    var actualFragment: Fragment = LoginFragment()
     companion object {
         const val FIRST_ACTIVITY_TEXT = "Fishtext"
     }
@@ -13,13 +14,16 @@ class FragmentsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-        createFragment(LoginFragment())
+    }
+
+    override fun onResume() {
+        super.onResume()
+        createFragment(actualFragment)
     }
 
     fun createFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.activity_second_fragment_container, fragment)
-        transaction.addToBackStack(null)
         transaction.commit()
     }
 
